@@ -1,0 +1,36 @@
+# Ignore operating system files
+.DS_Store
+Thumbs.db
+
+# Ignore log files and temporary files
+*.log
+*.tmp
+
+# Ignore node_modules folder (for JavaScript/Node.js projects)
+node_modules/
+
+# Ignore Python compiled files
+*.pyc
+__pycache__/
+
+# Ignore Java compiled files
+*.class
+
+# Ignore environment variables files
+.env
+
+# Ignore IDE-specific files
+.vscode/
+.idea/
+
+# Ignore build directories
+dist/
+build/
+
+# Ignore package archives
+*.zip
+*.tar.gz
+
+# Ignore macOS system files
+*.swp
+*~
