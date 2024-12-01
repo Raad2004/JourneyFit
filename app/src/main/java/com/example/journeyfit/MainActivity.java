@@ -30,7 +30,6 @@ public class MainActivity extends AppCompatActivity {
         tutorialButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Create an Intent to start the Tutorial activity
                 Intent intent = new Intent(MainActivity.this, Tutorial.class);
                 startActivity(intent);
             }
