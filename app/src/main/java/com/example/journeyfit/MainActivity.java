@@ -25,14 +25,21 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
+        // Setup Tutorial Button
         Button tutorialButton = findViewById(R.id.tutorial_button);
-
-        tutorialButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, Tutorial.class);
-                startActivity(intent);
-            }
+        tutorialButton.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, Tutorial.class);
+            startActivity(intent);
         });
+
+        Button profileButton = findViewById(R.id.profile_button);
+        profileButton.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, ProfilePage.class);
+            startActivity(intent);
+        });
+
+
     }
+
+
 }
