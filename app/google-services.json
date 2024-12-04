@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "400809299509",
+    "project_id": "journeyfit-3b2cd",
+    "storage_bucket": "journeyfit-3b2cd.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:400809299509:android:7bfe8a17fd90203c0aeb7c",
+        "android_client_info": {
+          "package_name": "com.example.journeyfit"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCeubSDCUHo0a-EUk4caoz72UppSKUeE8k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
