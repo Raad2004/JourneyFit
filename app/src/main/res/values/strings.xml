@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">JourneyFit</string>
+
+    <string-array name="spinner_options">
+        <item>Weight</item>
+        <item>Calories Burned</item>
+        <item>Distance</item>
+        <item>Bench Press</item>
+        <item>Squat</item>
+    </string-array>
 </resources>

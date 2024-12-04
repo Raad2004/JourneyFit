@@ -26,11 +26,22 @@ public class MainActivity extends AppCompatActivity {
         });
 
         Button tutorialButton = findViewById(R.id.tutorial_button);
+        Button ProgressButton=findViewById(R.id.progress_button);
+
+        ProgressButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this,ProgressActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
 
         tutorialButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Create an Intent to start the Tutorial activity
+
                 Intent intent = new Intent(MainActivity.this, Tutorial.class);
                 startActivity(intent);
             }
