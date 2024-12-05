@@ -17,6 +17,17 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class FoodTracking extends AppCompatActivity {
 
+    //default goals
+    private int calGoal = 2000;
+    private int carbGoal = 250;
+    private int fatGoal = 67;
+    private int proteinGoal = 100;
+
+    private int totalCals = 0;
+    private int totalCarbs = 0;
+    private int totalFats = 0;
+    private int totalProtein = 0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,6 +39,11 @@ public class FoodTracking extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        LinearLayout popupDietSelection = findViewById(R.id.popup_diet_selection);
+
+        //set initial remaining fields values (with default goals
+        updateRemainingFields();
 
     // bottom navigation button
         Button foodButton = findViewById(R.id.food_button);
@@ -75,10 +91,11 @@ public class FoodTracking extends AppCompatActivity {
         TextView meal3fats = findViewById(R.id.meal3fats);
         TextView meal3protein = findViewById(R.id.meal3protein);
 
-        TextView totalProtein = findViewById(R.id.meal1cals2);
-        TextView totalFats = findViewById(R.id.meal1cals3);
-        TextView totalCals = findViewById(R.id.meal1cals4);
-        TextView totalCarbs = findViewById(R.id.meal1cals5);
+        TextView totalCals = findViewById(R.id.meal1cals2);
+        TextView totalCarbs = findViewById(R.id.meal1cals3);
+        TextView totalFats = findViewById(R.id.meal1cals4);
+        TextView totalProtein = findViewById(R.id.meal1cals5);
+
 
         Button homeButton = findViewById(R.id.home_button);
         homeButton.setOnClickListener(v -> {
@@ -153,11 +170,19 @@ public class FoodTracking extends AppCompatActivity {
                             + Integer.parseInt(meal2protein.getText().toString())
                             + Integer.parseInt(meal3protein.getText().toString());
 
+                    setTotalCals(totalCalsValue);
+                    setTotalCarbs(totalCarbsValue);
+                    setTotalFats(totalFatsValue);
+                    setTotalProtein(totalProteinValue);
+
                     // Update total fields
                     totalCals.setText(String.valueOf(totalCalsValue));
                     totalCarbs.setText(String.valueOf(totalCarbsValue));
                     totalFats.setText(String.valueOf(totalFatsValue));
                     totalProtein.setText(String.valueOf(totalProteinValue));
+
+                    //update remaining fields
+                    updateRemainingFields();
 
                 } catch (NumberFormatException e) {
                     System.out.println("Error: Please enter valid numeric values for all fields.");
@@ -168,10 +193,96 @@ public class FoodTracking extends AppCompatActivity {
             }
         });
 
+    Button generate = findViewById(R.id.btn_generate_food);
+    generate.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            //this button gives the user options to select from pre selected goals.
+            //these goals will be: keto, pescatarian
+
+            popupDietSelection.setVisibility(View.VISIBLE);
+            popupDietSelection.bringToFront();
+
+        }
+    });
+
+        Button selectButton = findViewById(R.id.select_button);
+        RadioGroup radioGroupDiet = findViewById(R.id.radioGroupDiet);
+
+        //select button for diet selection
+        selectButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Get the selected radio button's ID
+                int selectedRadioButtonId = radioGroupDiet.getCheckedRadioButtonId();
+
+                // Perform actions based on the selected diet
+                if (selectedRadioButtonId == R.id.radioKeto) {
+                    //set goals based on keto diet. this means low carbs and lower calories
+
+                    setCalGoal(1500);
+                    setCarbGoal(55);
+                    setFatGoal(83);
+                    setProteinGoal(131);
+
+
+                } else if (selectedRadioButtonId == R.id.radioPescatarian) {
+                    // Action for Pescatarian Diet
+
+                    setCalGoal(2300);
+                    setCarbGoal(173);
+                    setFatGoal(103);
+                    setProteinGoal(173);
+                } else if (selectedRadioButtonId == R.id.radioVegetarian) {
+                    // Action for Vegetarian Diet
+                    setCalGoal(2000);
+                    setCarbGoal(215);
+                    setFatGoal(96);
+                    setProteinGoal(70);
+                }
+
+                // Hide the popup after selection
+                updateRemainingFields();
+                popupDietSelection.setVisibility(View.GONE);
+
+            }
 
 
 
+        });
+    }
+    public int getCalGoal(){return this.calGoal;}
+    public int getCarbGoal(){return this.carbGoal;}
+    public int getFatGoal(){return this.fatGoal;}
+    public int getProteinGoal(){return this.proteinGoal;}
+    public int getTotalCals(){return this.totalCals;}
+    public int getTotalCarbs(){return this.totalCarbs;}
+    public int getTotalFats(){return this.totalFats;}
+    public int getTotalProtein(){return this.totalProtein;}
+    public void setCalGoal(int goal){this.calGoal = goal;}
+    public void setCarbGoal(int goal){this.carbGoal = goal;}
+    public void setFatGoal(int goal){this.fatGoal = goal;}
+    public void setProteinGoal(int goal){this.proteinGoal = goal;}
+    public void setTotalCals(int cals){this.totalCals = cals;}
+    public void setTotalCarbs(int carbs){this.totalCarbs = carbs;}
+    public void setTotalFats(int fats){this.totalFats = fats;}
+    public void setTotalProtein(int protein){this.totalProtein = protein;}
+
+    public void updateRemainingFields(){
+        //set remaining values
+        TextView remainingCals = findViewById(R.id.remainingCals);
+        TextView remainingCarbs = findViewById(R.id.remainingCarbs);
+        TextView remainingFats = findViewById(R.id.remainingFats);
+        TextView remainingProtein = findViewById(R.id.remainingProtein);
+
+        remainingCals.setText(String.valueOf(getCalGoal() - getTotalCals()));
+        remainingCarbs.setText(String.valueOf(getCarbGoal() - getTotalCarbs()) + "g");
+        remainingFats.setText(String.valueOf(getFatGoal() - getTotalFats()) + "g");
+        remainingProtein.setText(String.valueOf(getProteinGoal() - getTotalProtein()) + "g");
 
 
     }
+
+
+
 }
