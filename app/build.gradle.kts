@@ -11,7 +11,7 @@ android {
 
     defaultConfig {
         applicationId = "com.example.journeyfit"
-        minSdk = 33
+        minSdk = 26
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
@@ -37,7 +37,7 @@ android {
 
 
 dependencies {
-
+    implementation ("co.yml:ycharts:2.1.0")
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.activity)
@@ -47,3 +47,4 @@ dependencies {
     androidTestImplementation(libs.espresso.core)
 
 }
+
