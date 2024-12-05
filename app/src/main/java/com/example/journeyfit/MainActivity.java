@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
         Button tutorialButton = findViewById(R.id.tutorial_button);
         Button ProgressButton=findViewById(R.id.progress_button);
         Button foodButton = findViewById(R.id.food_button);
+        Button nearbyButton = findViewById(R.id.nearby_button);
         // Add listener for Food button
         foodButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -55,7 +56,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
+        nearbyButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, NearbyActivity.class);
+                startActivity(intent);
+            }
+        });
 
     }
 }

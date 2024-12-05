@@ -41,12 +41,21 @@ public class ProgressActivity extends AppCompatActivity {
             startActivity(intent);
         });
 
-        Button foodButton = findViewById(R.id.Food);
+        Button foodButton = findViewById(R.id.food_button);
         // Add listener for Food button
         foodButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(ProgressActivity.this, FoodTracking.class);
+                startActivity(intent);
+            }
+        });
+
+        Button nearbyButton = findViewById(R.id.nearby_button);
+        nearbyButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(ProgressActivity.this,NearbyActivity.class);
                 startActivity(intent);
             }
         });

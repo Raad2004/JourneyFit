@@ -34,6 +34,14 @@ public class FoodTracking extends AppCompatActivity {
         Button progressButton = findViewById(R.id.progress_button);
         Button nearbyButton = findViewById(R.id.nearby_button);
 
+        nearbyButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(FoodTracking.this,NearbyActivity.class);
+                startActivity(intent);
+            }
+        });
+
     // "+" Buttons alongside the "meal" names.
     Button addMeal = findViewById(R.id.add);
 
