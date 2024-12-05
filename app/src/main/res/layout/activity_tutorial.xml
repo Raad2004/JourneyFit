@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="#ADD8E6"
+    tools:context=".Tutorial">
+
+    <TextView
+        android:id="@+id/tutorials_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="136dp"
+        android:layout_marginTop="24dp"
+        android:text="Tutorials"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <Button
+            android:id="@+id/home_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Home"
+            android:textColor="#000000"
+            android:backgroundTint="#ADD8E6" />
+
+        <Button
+            android:id="@+id/food_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Food"
+            android:textColor="#000000"
+            android:backgroundTint="#ADD8E6" />
+
+        <Button
+            android:id="@+id/progress_button"
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Progress"
+            android:textColor="#000000"
+            android:backgroundTint="#ADD8E6" />
+
+        <Button
+            android:id="@+id/nearby_button"
+            android:layout_width="10dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Nearby"
+            android:textColor="#000000"
+            android:backgroundTint="#ADD8E6" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="64dp"
+        android:text="Next"
+        android:textColor="#000000"
+        android:backgroundTint="#ADD8E6"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:layout_editor_absoluteY="587dp" />
+
+    <Button
+        android:id="@+id/setting_goals_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="20dp"
+        android:text="Setting Goals"
+        android:textColor="#000000"
+        android:backgroundTint="#ADD8E6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/find_routes_icon" />
+
+    <ImageView
+        android:id="@+id/setting_goals_icon"
+        android:layout_width="144dp"
+        android:layout_height="91dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="24dp"
+        android:src="@drawable/goals"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/setting_goals_button" />
+
+    <ImageView
+        android:id="@+id/find_routes_icon"
+        android:layout_width="137dp"
+        android:layout_height="102dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/running"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/find_routes_button" />
+
+    <Button
+        android:id="@+id/find_routes_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="28dp"
+        android:text="Find Running Routes"
+        android:textColor="#000000"
+        android:backgroundTint="#ADD8E6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logging_food_icon" />
+
+    <ImageView
+        android:id="@+id/logging_food_icon"
+        android:layout_width="150dp"
+        android:layout_height="85dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="28dp"
+        android:src="@drawable/tracking"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logging_food_button" />
+
+    <Button
+        android:id="@+id/logging_food_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="24dp"
+        android:text="Logging Food"
+        android:textColor="#000000"
+        android:backgroundTint="#ADD8E6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tutorials_title" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
