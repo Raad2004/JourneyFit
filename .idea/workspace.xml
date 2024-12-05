@@ -50,8 +50,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="92c7c8a1-6ad5-4e02-953e-15af945d00a4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/journeyfit/FoodTracking.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/food_tracking.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/journeyfit/FoodTracking.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/journeyfit/FoodTracking.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/food_tracking.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/food_tracking.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -171,6 +174,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
+    "git-widget-placeholder": "tanishqbranch2",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_directory_selection": "S:/Users/tanis/AndroidStudioProjects/JourneyFit/app/src/main/java",

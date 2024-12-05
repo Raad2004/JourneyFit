@@ -67,6 +67,11 @@ public class FoodTracking extends AppCompatActivity {
         TextView meal3fats = findViewById(R.id.meal3fats);
         TextView meal3protein = findViewById(R.id.meal3protein);
 
+        TextView totalProtein = findViewById(R.id.meal1cals2);
+        TextView totalFats = findViewById(R.id.meal1cals3);
+        TextView totalCals = findViewById(R.id.meal1cals4);
+        TextView totalCarbs = findViewById(R.id.meal1cals5);
+
         Button homeButton = findViewById(R.id.home_button);
         homeButton.setOnClickListener(v -> {
             Intent intent = new Intent(FoodTracking.this, MainActivity.class);
@@ -88,29 +93,23 @@ public class FoodTracking extends AppCompatActivity {
             public void onClick(View v) {
                 int selectedMealId = mealSelector.getCheckedRadioButtonId();
 
-                // Parse and store the nutritional values as integers
                 try {
                     int caloriesValue = Integer.parseInt(caloriesInput.getText().toString().trim());
                     int carbsValue = Integer.parseInt(carbsInput.getText().toString().trim());
                     int fatsValue = Integer.parseInt(fatsInput.getText().toString().trim());
                     int proteinValue = Integer.parseInt(proteinInput.getText().toString().trim());
 
-                    // Check which meal is selected and add the values accordingly
-                    if (selectedMealId == R.id.meal1_radio) {  // Assuming R.id.meal1RadioButton is the radio button for meal 1
-                        // Get the current values of meal1
+                    if (selectedMealId == R.id.meal1_radio) {
                         int currentMeal1Cals = Integer.parseInt(meal1cals.getText().toString());
                         int currentMeal1Carbs = Integer.parseInt(meal1carbs.getText().toString());
                         int currentMeal1Fats = Integer.parseInt(meal1fats.getText().toString());
                         int currentMeal1Protein = Integer.parseInt(meal1protein.getText().toString());
 
-                        // Add the new input values to the existing values
                         meal1cals.setText(String.valueOf(currentMeal1Cals + caloriesValue));
                         meal1carbs.setText(String.valueOf(currentMeal1Carbs + carbsValue));
                         meal1fats.setText(String.valueOf(currentMeal1Fats + fatsValue));
                         meal1protein.setText(String.valueOf(currentMeal1Protein + proteinValue));
-                    }
-                    else if (selectedMealId == R.id.meal2_radio) {  // Assuming R.id.meal2RadioButton is the radio button for meal 2
-                        // Similar code for meal 2
+                    } else if (selectedMealId == R.id.meal2_radio) {
                         int currentMeal2Cals = Integer.parseInt(meal2cals.getText().toString());
                         int currentMeal2Carbs = Integer.parseInt(meal2carbs.getText().toString());
                         int currentMeal2Fats = Integer.parseInt(meal2fats.getText().toString());
@@ -120,9 +119,7 @@ public class FoodTracking extends AppCompatActivity {
                         meal2carbs.setText(String.valueOf(currentMeal2Carbs + carbsValue));
                         meal2fats.setText(String.valueOf(currentMeal2Fats + fatsValue));
                         meal2protein.setText(String.valueOf(currentMeal2Protein + proteinValue));
-                    }
-                    else if (selectedMealId == R.id.meal3_radio) {  // Assuming R.id.meal3RadioButton is the radio button for meal 3
-                        // Similar code for meal 3
+                    } else if (selectedMealId == R.id.meal3_radio) {
                         int currentMeal3Cals = Integer.parseInt(meal3cals.getText().toString());
                         int currentMeal3Carbs = Integer.parseInt(meal3carbs.getText().toString());
                         int currentMeal3Fats = Integer.parseInt(meal3fats.getText().toString());
@@ -133,13 +130,32 @@ public class FoodTracking extends AppCompatActivity {
                         meal3fats.setText(String.valueOf(currentMeal3Fats + fatsValue));
                         meal3protein.setText(String.valueOf(currentMeal3Protein + proteinValue));
                     }
+
+                    // Calculate and update totals
+                    int totalCalsValue = Integer.parseInt(meal1cals.getText().toString())
+                            + Integer.parseInt(meal2cals.getText().toString())
+                            + Integer.parseInt(meal3cals.getText().toString());
+                    int totalCarbsValue = Integer.parseInt(meal1carbs.getText().toString())
+                            + Integer.parseInt(meal2carbs.getText().toString())
+                            + Integer.parseInt(meal3carbs.getText().toString());
+                    int totalFatsValue = Integer.parseInt(meal1fats.getText().toString())
+                            + Integer.parseInt(meal2fats.getText().toString())
+                            + Integer.parseInt(meal3fats.getText().toString());
+                    int totalProteinValue = Integer.parseInt(meal1protein.getText().toString())
+                            + Integer.parseInt(meal2protein.getText().toString())
+                            + Integer.parseInt(meal3protein.getText().toString());
+
+                    // Update total fields
+                    totalCals.setText(String.valueOf(totalCalsValue));
+                    totalCarbs.setText(String.valueOf(totalCarbsValue));
+                    totalFats.setText(String.valueOf(totalFatsValue));
+                    totalProtein.setText(String.valueOf(totalProteinValue));
+
                 } catch (NumberFormatException e) {
-                    // Handle invalid input (non-numeric values or empty fields)
                     System.out.println("Error: Please enter valid numeric values for all fields.");
                     return;
                 }
 
-                // Hide the add meal form after confirming
                 popupAddMeal.setVisibility(View.GONE);
             }
         });
