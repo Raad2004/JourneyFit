@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:backgroundTint="#ADD8E6">
 
     <TextView
         android:id="@+id/tutorialTitle"
@@ -72,7 +73,7 @@
         android:layout_marginTop="28dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/trackMacronutrientsDescription"
-        app:srcCompat="@drawable/pie" />
+        app:srcCompat="@drawable/calories" />
 
     <TextView
         android:id="@+id/calorieReminder"
@@ -93,7 +94,7 @@
         android:layout_marginEnd="44dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/calorieReminder"
-        app:srcCompat="@drawable/pie" />
+        app:srcCompat="@drawable/macros" />
 
     <LinearLayout
         android:id="@+id/bottom_navigation"
@@ -108,30 +109,37 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Home" />
+            android:text="Home"
+            android:textColor="#000000"
+            android:backgroundTint="#ADD8E6" />
 
         <Button
             android:id="@+id/food_button"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Food" />
+            android:text="Food"
+            android:textColor="#000000"
+            android:backgroundTint="#ADD8E6" />
 
         <Button
             android:id="@+id/progress_button"
             android:layout_width="20dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Progress" />
+            android:text="Progress"
+            android:textColor="#000000"
+            android:backgroundTint="#ADD8E6" />
 
         <Button
             android:id="@+id/nearby_button"
             android:layout_width="10dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Nearby" />
+            android:text="Nearby"
+            android:textColor="#000000"
+            android:backgroundTint="#ADD8E6" />
 
     </LinearLayout>
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
