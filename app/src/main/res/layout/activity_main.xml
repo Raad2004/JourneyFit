@@ -5,8 +5,8 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:backgroundTint="#ADD8E6"
     tools:context=".MainActivity">
-
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/calories_container"
@@ -29,7 +29,7 @@
             android:id="@+id/calories_pie_chart"
             android:layout_width="365dp"
             android:layout_height="145dp"
-            android:background="@drawable/pie"
+            android:background="@drawable/piechart2"
             app:layout_constraintStart_toStartOf="parent"
             tools:layout_editor_absoluteY="24dp" />
 
@@ -67,7 +67,7 @@
             android:id="@+id/calories_pie_chart"
             android:layout_width="365dp"
             android:layout_height="145dp"
-            android:background="@drawable/pie"
+            android:background="@drawable/piechart"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/calories_title" />
 
@@ -126,28 +126,36 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Home" />
+            android:text="Home"
+            android:textColor="#000000"
+            android:backgroundTint="#ADD8E6" />
 
         <Button
             android:id="@+id/food_button"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Food" />
+            android:text="Food"
+            android:textColor="#000000"
+            android:backgroundTint="#ADD8E6" />
 
         <Button
             android:id="@+id/progress_button"
             android:layout_width="20dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Progress" />
+            android:text="Progress"
+            android:textColor="#000000"
+            android:backgroundTint="#ADD8E6" />
 
         <Button
             android:id="@+id/nearby_button"
             android:layout_width="10dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Nearby" />
+            android:text="Nearby"
+            android:textColor="#000000"
+            android:backgroundTint="#ADD8E6" />
 
     </LinearLayout>
 
@@ -158,6 +166,8 @@
         android:layout_marginStart="28dp"
         android:layout_marginTop="28dp"
         android:text="Tutorial"
+        android:textColor="#000000"
+        android:backgroundTint="#ADD8E6"
         app:layout_constraintStart_toEndOf="@+id/profile_button"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -168,6 +178,8 @@
         android:layout_marginStart="40dp"
         android:layout_marginTop="28dp"
         android:text="Profile"
+        android:textColor="#000000"
+        android:backgroundTint="#ADD8E6"
         app:layout_constraintStart_toEndOf="@+id/daily_intake_title2"
         app:layout_constraintTop_toTopOf="parent" />
 
