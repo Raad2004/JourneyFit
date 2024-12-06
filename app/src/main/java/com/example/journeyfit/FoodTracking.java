@@ -8,6 +8,7 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -198,7 +199,7 @@ public class FoodTracking extends AppCompatActivity {
                     updateRemainingFields();
 
                 } catch (NumberFormatException e) {
-                    System.out.println("Error: Please enter valid numeric values for all fields.");
+                    Toast.makeText(getApplicationContext(), "Please input all fields", Toast.LENGTH_SHORT).show();
                     return;
                 }
 
