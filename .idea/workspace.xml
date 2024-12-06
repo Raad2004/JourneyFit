@@ -49,7 +49,7 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="92c7c8a1-6ad5-4e02-953e-15af945d00a4" name="Changes" comment="integrated nearby activity with the app">
+    <list default="true" id="92c7c8a1-6ad5-4e02-953e-15af945d00a4" name="Changes" comment="implemented diet recommendation feature">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/journeyfit/FoodTracking.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/journeyfit/FoodTracking.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/food_tracking.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/food_tracking.xml" afterDir="false" />
@@ -142,12 +142,12 @@
     &quot;assignee&quot;: &quot;TanishqM1&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Raad2004/JourneyFit.git",
-    "accountId": "e6acb183-3158-4221-b73f-72c4ee87b1c6"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Raad2004/JourneyFit.git&quot;,
+    &quot;accountId&quot;: &quot;e6acb183-3158-4221-b73f-72c4ee87b1c6&quot;
   }
-}]]></component>
+}</component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -162,24 +162,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Android App.app.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "RunOnceActivity.readMode.enableVisualFormatting": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "cf.first.check.clang-format": "false",
-    "cidr.known.project.marker": "true",
-    "git-widget-placeholder": "tanishqbranch2",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_directory_selection": "S:/Users/tanis/AndroidStudioProjects/JourneyFit/app/src/main/java",
-    "last_opened_file_path": "/Users/kaidenmerchant/Desktop/COSC341/Labs/341_Full_Project/JourneyFit",
-    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Android App.app.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;tanishqbranch2&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_directory_selection&quot;: &quot;S:/Users/tanis/AndroidStudioProjects/JourneyFit/app/src/main/java&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/kaidenmerchant/Desktop/COSC341/Labs/341_Full_Project/JourneyFit&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.example.journeyfit" />
@@ -281,11 +281,20 @@
       <option name="project" value="LOCAL" />
       <updated>1733420526481</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="implemented diet recommendation feature">
+      <option name="closed" value="true" />
+      <created>1733424940237</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1733424940237</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="integrated nearby activity with the app" />
-    <option name="LAST_COMMIT_MESSAGE" value="integrated nearby activity with the app" />
+    <MESSAGE value="implemented diet recommendation feature" />
+    <option name="LAST_COMMIT_MESSAGE" value="implemented diet recommendation feature" />
   </component>
 </project>

@@ -96,6 +96,19 @@ public class FoodTracking extends AppCompatActivity {
         TextView totalFats = findViewById(R.id.meal1cals4);
         TextView totalProtein = findViewById(R.id.meal1cals5);
 
+        meal1carbs.setVisibility(View.GONE);
+        meal1fats.setVisibility(View.GONE);
+        meal1protein.setVisibility(View.GONE);
+
+        meal2carbs.setVisibility(View.GONE);
+        meal2fats.setVisibility(View.GONE);
+        meal2protein.setVisibility(View.GONE);
+
+        meal3carbs.setVisibility(View.GONE);
+        meal3fats.setVisibility(View.GONE);
+        meal3protein.setVisibility(View.GONE);
+
+
 
         Button homeButton = findViewById(R.id.home_button);
         homeButton.setOnClickListener(v -> {
